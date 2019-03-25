@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>bai 5</title>
+	<style>
+		#mainqc {
+			position:fixed;
+			right:1px;
+			bottom:0;
+			width:444px;
+		}
+		#tatqc,#moqc {
+			width:100%;
+			padding:10px;
+			background:teal;
+		}
+		#moqc {
+			display:none;
+		}
+		a {
+			color:white;
+			text-decoration:none;
+		}
+		a:hover
+		{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+	<div id="mainqc">
+		<div id="tatqc">
+			<a href="#" onclick="hide()">Tat quang cao X</a>
+		</div>
+		<div id="picqc">
+			<a href="https://dothanhspyb.com/" target="_blank">
+				<img src="quangcao.png" width="444" height="274" alt=""/>
+			</a>
+		</div>
+		<div id="moqc">
+			<a href="#" onclick="show()">Mo quang cao</a>
+		</div>
+	</div>
+	<script>
+		function hide() {
+			document.getElementById("tatqc").style.display="none";
+			document.getElementById("picqc").style.display="none";
+			document.getElementById("moqc").style.display="block";
+		}
+		function show() {
+			document.getElementById("tatqc").style.display="block";
+			document.getElementById("picqc").style.display="block";
+			document.getElementById("moqc").style.display="none";
+		}
+	</script>
+</body>
+</html>
