@@ -1,32 +1,26 @@
-def drawLineAbove(size, drawTime):
+# draw line --- --- ---
+def DrawLineHorizonal(size):
     x = "-"
-    if drawTime < size - 1:
-        drawLine = " " + size * x
-    else:
-        drawLine = size * x + " "
-    print(drawLine)
+    drawLineFirst = (size - 1) * (" " + 3 * x)
+    drawLineLast = " " + 3 * x + " "
+    print(drawLineFirst + drawLineLast)
 
-def drawLineVertical(size,drawTime):
+# draw line |   |   |   |
+def DrawLineVertical(size):
     y = " "
-    if drawTime < size - 1:
-        drawLine = "|"+ size * y
-    else:
-        drawLine = size * y + "|"
-    print(drawLine)
+    drawVerticalFirst = (size - 1) * ("|"+ 3 * y)
+    drawVerticalLast = "|" + 3 * y + "|"
+    print(drawVerticalFirst + drawVerticalLast)
 
-def drawLineLast(size):
-    x = "-"
-    print(size *(" " + size * x + " "))
-
-def drawGameBoards(size):
+def DrawGameBoards(size):
     i = 0
     while i < size:
-        drawLineAbove(size,i)
-        drawLineVertical(size,i)
+        DrawLineHorizonal(size)
+        DrawLineVertical(size)
         i += 1
-    drawLineLast(size)
+    DrawLineHorizonal(size)
 
 size = int(input("Input size game board: "))
-drawGameBoards(size)
+DrawGameBoards(size)
 
 
