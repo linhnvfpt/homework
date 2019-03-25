@@ -1,0 +1,10 @@
+D:\linh\lesson\c#\window_form\DemoConnectSQLServer\DemoConnectSQLServer\bin\Debug\DemoConnectSQLServer.exe.config
+D:\linh\lesson\c#\window_form\DemoConnectSQLServer\DemoConnectSQLServer\bin\Debug\DemoConnectSQLServer.exe
+D:\linh\lesson\c#\window_form\DemoConnectSQLServer\DemoConnectSQLServer\bin\Debug\DemoConnectSQLServer.pdb
+D:\linh\lesson\c#\window_form\DemoConnectSQLServer\DemoConnectSQLServer\obj\Debug\DemoConnectSQLServer.csprojResolveAssemblyReference.cache
+D:\linh\lesson\c#\window_form\DemoConnectSQLServer\DemoConnectSQLServer\obj\Debug\DemoConnectSQLServer.frmMain.resources
+D:\linh\lesson\c#\window_form\DemoConnectSQLServer\DemoConnectSQLServer\obj\Debug\DemoConnectSQLServer.Properties.Resources.resources
+D:\linh\lesson\c#\window_form\DemoConnectSQLServer\DemoConnectSQLServer\obj\Debug\DemoConnectSQLServer.csproj.GenerateResource.Cache
+D:\linh\lesson\c#\window_form\DemoConnectSQLServer\DemoConnectSQLServer\obj\Debug\DemoConnectSQLServer.csproj.CoreCompileInputs.cache
+D:\linh\lesson\c#\window_form\DemoConnectSQLServer\DemoConnectSQLServer\obj\Debug\DemoConnectSQLServer.exe
+D:\linh\lesson\c#\window_form\DemoConnectSQLServer\DemoConnectSQLServer\obj\Debug\DemoConnectSQLServer.pdb

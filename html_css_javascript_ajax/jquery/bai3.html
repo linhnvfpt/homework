@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>bài giảng jquery</title>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-content">
+            <h1 class="w3-text-blue">jQuery Selector</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, officiis!</p>
+            <p>Vero a reiciendis laborum accusamus ipsa veniam ex repellendus qui?</p>
+            <p>Laborum odio magnam ipsa eaque cumque fugit fuga libero esse!</p>
+            <p>Vel eaque aliquam exercitationem harum assumenda incidunt blanditiis enim quibusdam.</p>
+            <p>Mollitia sapiente aut placeat ducimus nulla, similique sunt deleniti officiis?</p>
+            <p>Libero fugit itaque soluta ipsam facilis voluptates nemo illum repudiandae?</p>
+            <p>Odio distinctio similique rem velit, quidem fuga unde magnam aspernatur.</p>
+            <p>Facere aut quae beatae? Sunt tempora quas minima aperiam laborum?</p>
+            <p>Enim cumque doloribus repellendus nobis commodi eaque ea nesciunt pariatur?</p>
+            <p>Amet est labore impedit sunt eveniet necessitatibus repudiandae, porro sapiente?</p>
+        </div>
+        <script src="jquery-3.3.1.js">
+        </script>
+        <script>
+            $(document).ready(function() {
+                $("p").css({"padding":"7px 3px","border-bottom":"1px solid #f1f1f1"});
+                $("p:first").css("background","red");
+            });
+        </script>
+    </body>
+</html>

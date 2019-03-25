@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>W3CSS framework</title>
+        <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+        <div class="w3-content w3-display-container">
+            <img src="pictures/04.jpg" width="100%" class="slide" alt=""/>
+            <img src="pictures/05.jpg" width="100%" class="slide" alt=""/>
+            <img src="pictures/06.jpg" width="100%" class="slide" alt=""/>
+            <img src="pictures/07.jpg" width="100%" class="slide" alt=""/>
+            <button class="w3-button w3-black w3-display-left" onclick="plus(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plus(+1)">&#10095;</button>
+        </div>
+        <script>
+            var index = 1;
+            show(index);
+            function plus(n) 
+            {
+                show(index += n);
+            }
+            function show(n)
+            {
+                var i;
+                var x = document.getElementsByClassName("slide");
+                if(n > x.length)
+                {
+                    index = 1;
+                }
+                if(n < 1)
+                {
+                    index = x.length;
+                }
+                for(i=0;i<x.length;i++)
+                {
+                    x[i].style.display="none";
+                }
+                x[index-1].style.display="block";
+            }
+        </script>
+    </body>
+</html>
