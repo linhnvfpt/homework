@@ -1,0 +1,3 @@
+26-3-2019
+1.code again game Pong in video freecodecamp
+2.learn to use framework beautifulsoup
