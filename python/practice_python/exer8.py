@@ -24,7 +24,7 @@ while p != "Q" and pp != "Q":
       break
   if p != "R" and p != "P" and p != "S":
       print("Player 1 input a invalid value.")
-      continue;
+      continue
     
   pp = input("Player 2, please enter Rock,Paper or Scissors : ")
   if pp == 'Q':
@@ -32,7 +32,7 @@ while p != "Q" and pp != "Q":
       break
   if pp != "R" and pp != "P" and pp != "S":
       print("Player 2 input a invalid value.")
-      continue;
+      continue
     
   if p == pp:
     print("Players Equal!")

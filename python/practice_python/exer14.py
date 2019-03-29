@@ -8,6 +8,9 @@
     #Go back and do Exercise 5 using sets, and write the solution for that
     #in a different function.
 
+def inc(x):
+    return x + 2
+
 def removeDuplicateUseList(aList):
     bList = []
     for i in aList:
