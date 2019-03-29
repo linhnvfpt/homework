@@ -93,18 +93,18 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
-        playsound(r"homework\python\pong_game\bounce.wav")
+        playsound(r"D:\lesson\homework\python\pong_game\bounce.wav")
 
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
-        playsound(r"homework\python\pong_game\bounce.wav")
+        playsound(r"D:\lesson\homework\python\pong_game\bounce.wav")
 
     if ball.xcor() > 390:
         ball.goto(0, 0)
         ball.dx *= -1
         score_a += 1
-        playsound(r'homework\python\pong_game\bounce.wav')
+        playsound(r'D:\lesson\homework\python\pong_game\bounce.wav')
         pen.clear()
         pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
 
@@ -112,7 +112,7 @@ while True:
         ball.goto(0, 0)
         ball.dx *= -1
         score_b += 1
-        playsound(r'homework\python\pong_game\bounce.wav')
+        playsound(r'D:\lesson\homework\python\pong_game\bounce.wav')
         pen.clear()
         pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
 
@@ -120,10 +120,10 @@ while True:
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 40 and ball.ycor() > paddle_b.ycor() -40):
         ball.setx(340)
         ball.dx *= -1
-        playsound(r'homework\python\pong_game\bounce.wav')
+        playsound(r'D:\lesson\homework\python\pong_game\bounce.wav')
 
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() -40):
         ball.setx(-340)
         ball.dx *= -1
-        playsound(r'homework\python\pong_game\bounce.wav')
+        playsound(r'D:\lesson\homework\python\pong_game\bounce.wav')
 
