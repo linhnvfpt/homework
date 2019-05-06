@@ -67,6 +67,7 @@
             this.Controls.Add(this.frmAddCommand_btnAdd);
             this.Controls.Add(this.frmAddCommand_txtNameCommand);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "AddCommandDialog";
             this.Text = "Add New Command";
             this.ResumeLayout(false);
