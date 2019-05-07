@@ -98,19 +98,46 @@ namespace TestCaseGenerator
         #region event handler buttons Delete
 
         private void frmMainForm_btnDelCommand_Click(object sender, EventArgs e)
-        {           
+        {
+            // Delete list Comamnd Parameter (GUI)
+
+            // Delete list Command Parameter with each object command
+            string nameCommandSelected = frmMain_lstCommand.GetItemText(frmMain_lstCommand.SelectedItem);
+            Command commandSelected = Commands.Find(x => x.Name.Equals(nameCommandSelected));
+            if (commandSelected == null) return;
+            commandSelected.GetListParam().Clear();
+
+            // Delete object command in list Command
+            Commands.Remove(commandSelected);
+
+            // Delete in GUI
             int iSeletectedItem = frmMain_lstCommand.SelectedIndex;
             if (iSeletectedItem == -1) return;
-            frmMain_lstCommand.Items.RemoveAt(iSeletectedItem);           
+            frmMain_lstCommand.Items.RemoveAt(iSeletectedItem);
+
+            // Refesh list Comamnd Parameters
+            frmMain_lstCommandParameters.Clear();
         }
 
         private void frmMainForm_btnDelParam_Click(object sender, EventArgs e)
         {
+            CommandParameters parameters = new CommandParameters();
+            // Get data of item will delete
             if (frmMain_lstCommandParameters.SelectedItems.Count < 0) return;
             foreach (ListViewItem eachItem in frmMain_lstCommandParameters.SelectedItems)
             {
                 frmMain_lstCommandParameters.Items.Remove(eachItem);
+                parameters.type = eachItem.SubItems[0].Text;
+                parameters.value = eachItem.SubItems[1].Text;
             }
+
+            // Get command name is selected
+            string nameCommandSelected = frmMain_lstCommand.GetItemText(frmMain_lstCommand.SelectedItem);
+            Command commandSelected = Commands.Find(x => x.Name.Equals(nameCommandSelected));
+            if (commandSelected == null) return;
+
+            // Delete parameters of command is selected
+            commandSelected.GetListParam().Remove(parameters);
         }
 
         private void frmMainForm_btnDelAssert_Click(object sender, EventArgs e)

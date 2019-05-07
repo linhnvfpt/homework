@@ -234,6 +234,7 @@
             // 
             // frmMain_lstCommandParameters
             // 
+            this.frmMain_lstCommandParameters.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.frmMain_lstCommandParameters.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6});

@@ -52,25 +52,42 @@ namespace TestCaseGenerator
             frmAddCommandPara_txtValue.Clear();
         }
 
+        /// <summary>
+        /// This function will save items in list "Command Parameter" on dailog "Add Command Parameters" and display these items on 
+        /// list "Command Parameter" on dialog "TestCaseGenerator"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmAddCommandPara_btnSave_Click(object sender, EventArgs e)
         {
+            // save items in list "Command Parameter" on dailog "Add Command Parameters" into list command
             CommandParameters dataItem;
-            dataItem.id = 0;
+            Command commandSelected;
 
             // Get main form
             MainForm frmParent = Application.OpenForms["MainForm"] as MainForm;
-            Command lastCommand = frmParent.Commands.Last<Command>();
-            if (lastCommand == null) return;
 
-            // Get data from the list view in dialog AddCommandParameters
-            for (int iAt = 0; iAt < frmAddCommandPara_lstCommandParam.Items.Count; iAt++)
+            // Get command in list Command on MainForm
+            Control[] controls = frmParent.Controls.Find("frmMain_lstCommand", true);
+            if (controls.Length > 0)
             {
-                dataItem.id += 1;
-                dataItem.type  = frmAddCommandPara_lstCommandParam.Items[iAt].Text;
-                dataItem.value = frmAddCommandPara_lstCommandParam.Items[iAt].SubItems[1].Text;
-                lastCommand.AddParameter(dataItem);
-            }
+                ListBox listCommand = controls[0] as ListBox;
+                string nameCommandSelected = listCommand.GetItemText(listCommand.SelectedItem);
+                commandSelected = frmParent.Commands.Find(x => x.Name.Equals(nameCommandSelected));
+                if (commandSelected == null) return;
 
+                // Get data from the list view in dialog AddCommandParameters
+                for (int iAt = 0; iAt < frmAddCommandPara_lstCommandParam.Items.Count; iAt++)
+                {
+                    dataItem.type = frmAddCommandPara_lstCommandParam.Items[iAt].Text;
+                    dataItem.value = frmAddCommandPara_lstCommandParam.Items[iAt].SubItems[1].Text;
+                    commandSelected.AddParameter(dataItem);
+                }
+            }
+            else
+                return;
+
+            // display these items on list "Command Parameter" on dialog "TestCaseGenerator"
             // Get list box in main form
             Control[] lstControls = frmParent.Controls.Find("frmMain_lstCommandParameters", true);
 
@@ -80,24 +97,14 @@ namespace TestCaseGenerator
                 ListView lstViewCommandParam = (ListView)lstControls[0];
                 lstViewCommandParam.Items.Clear();
 
-                for (int jAt = 0; jAt < lastCommand.GetListParam().Count; jAt++)
+                for (int jAt = 0; jAt < commandSelected.GetListParam().Count; jAt++)
                 {
-                    ListViewItem lvi = new ListViewItem(lastCommand.GetListParam().ElementAt(jAt).type);
-                    lvi.SubItems.Add(lastCommand.GetListParam().ElementAt(jAt).value);
+                    ListViewItem lvi = new ListViewItem(commandSelected.GetListParam().ElementAt(jAt).type);
+                    lvi.SubItems.Add(commandSelected.GetListParam().ElementAt(jAt).value);
                     lstViewCommandParam.Items.Add(lvi);
                 }
             }           
             Close();
-        }
-
-        private void frmAddCommandPara_lstCommandParam_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
-        {
-            e.DrawDefault = true;
-        }
-
-        private void frmAddCommandPara_lstCommandParam_DrawItem(object sender, DrawListViewItemEventArgs e)
-        {
-            e.DrawDefault = true;
         }
 
         private void frmAddCommandPara_cboType_SelectedIndexChanged(object sender, EventArgs e)

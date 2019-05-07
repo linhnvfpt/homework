@@ -8,13 +8,11 @@ namespace TestCaseGenerator
 {
     public struct CommandParameters
     {
-        public int id;
         public string type;
         public string value;
 
-        public CommandParameters(int pId, string pType, string pValue)
+        public CommandParameters(string pType, string pValue)
         {
-            id = pId;
             type = pType;
             value = pValue;
         }
