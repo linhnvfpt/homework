@@ -99,24 +99,25 @@ namespace TestCaseGenerator
 
         private void frmMainForm_btnDelCommand_Click(object sender, EventArgs e)
         {
-            // Delete list Comamnd Parameter (GUI)
-
-            // Delete list Command Parameter with each object command
+            // Delete list Command Parameter (in memory) with each object command
             string nameCommandSelected = frmMain_lstCommand.GetItemText(frmMain_lstCommand.SelectedItem);
             Command commandSelected = Commands.Find(x => x.Name.Equals(nameCommandSelected));
             if (commandSelected == null) return;
             commandSelected.GetListParam().Clear();
 
-            // Delete object command in list Command
+            // Delete list Command Parameter in GUI
+            foreach (ListViewItem item in frmMain_lstCommandParameters.Items)
+            {
+                item.Remove();
+            }
+
+            // Delete object command in list Command (in memory)
             Commands.Remove(commandSelected);
 
-            // Delete in GUI
+            // Delete list Command in GUI
             int iSeletectedItem = frmMain_lstCommand.SelectedIndex;
             if (iSeletectedItem == -1) return;
             frmMain_lstCommand.Items.RemoveAt(iSeletectedItem);
-
-            // Refesh list Comamnd Parameters
-            frmMain_lstCommandParameters.Clear();
         }
 
         private void frmMainForm_btnDelParam_Click(object sender, EventArgs e)
@@ -141,7 +142,23 @@ namespace TestCaseGenerator
         }
 
         private void frmMainForm_btnDelAssert_Click(object sender, EventArgs e)
-        {      
+        {
+            // Delete list Assert Parameter (in memory) with each object command
+            string nameAssertSelected = frmMain_lstAssert.GetItemText(frmMain_lstAssert.SelectedItem);
+            Assert assertSelected = Asserts.Find(x => x.Name.Equals(nameAssertSelected));
+            if (assertSelected == null) return;
+            assertSelected.GetListParam().Clear();
+
+            // Delete list Assert Parameter in GUI
+            foreach (ListViewItem item in frmMainForm_lstAssertProperties.Items)
+            {
+                item.Remove();
+            }
+
+            // Delete object assert in list Assert (in memory)
+            Asserts.Remove(assertSelected);
+
+            // Delete list Assert in GUI
             int iSeletectedItem = frmMain_lstAssert.SelectedIndex;
             if (iSeletectedItem == -1) return;
             frmMain_lstAssert.Items.RemoveAt(iSeletectedItem);          
@@ -149,11 +166,25 @@ namespace TestCaseGenerator
 
         private void frmMainForm_btnDelAssertParam_Click(object sender, EventArgs e)
         {
+            AssertParameters parameters = new AssertParameters();
+            // Get data of item will delete
             if (frmMainForm_lstAssertProperties.SelectedItems.Count < 0) return;
             foreach (ListViewItem eachItem in frmMainForm_lstAssertProperties.SelectedItems)
             {
                 frmMainForm_lstAssertProperties.Items.Remove(eachItem);
-            }           
+                parameters.name    = eachItem.SubItems[0].Text;
+                parameters.value   = eachItem.SubItems[1].Text;
+                parameters.operate = eachItem.SubItems[2].Text;
+                parameters.epsilon = eachItem.SubItems[3].Text;
+            }
+
+            // Get command name is selected
+            string nameAssertSelected = frmMain_lstAssert.GetItemText(frmMain_lstAssert.SelectedItem);
+            Assert assertSelected = Asserts.Find(x => x.Name.Equals(nameAssertSelected));
+            if (assertSelected == null) return;
+
+            // Delete parameters of command is selected
+            assertSelected.GetListParam().Remove(parameters);
         }
 
         #endregion
