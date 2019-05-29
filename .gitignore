@@ -5,3 +5,7 @@ python/practice_python/__pycache__/exer2.pyc
 /c#/TestTool/TestCaseGenerator/bin/x64/Debug
 /c#/TestTool/TestCaseGenerator/obj/x64/Debug
 python/app_python/sneak_preview/__pycache__/person.cpython-37.pyc
+class-shelve.bak
+class-shelve.dat
+class-shelve.dir
+python/app_python/sneak_preview/__pycache__/manager.cpython-37.pyc
