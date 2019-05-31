@@ -26,3 +26,9 @@ people.append(['tom', 50, 0, None])
 print(people[-1][0])
 print(people[-2][0])
 print(people[-3][0])
+
+NAME,AGE,PAY = range(3)
+linh = ['Linh Smith',42, 10000]
+print(linh[NAME])
+
+print(PAY, linh[PAY])
