@@ -6,4 +6,6 @@ class Manager(Person):
 
 if __name__ == '__main__':
     tom = Manager('tom doe',50, pay=50000, job='manager')
+    print(dir(tom))
+    print(tom.__doc__)
     print(tom.lastName())
