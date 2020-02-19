@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{cd476673-831c-4bd6-9d20-6e1c01669630}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>39.py</StartupFile>
+    <StartupFile>1.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -52,7 +52,37 @@
     <Compile Include="41.py" />
     <Compile Include="42.py" />
     <Compile Include="43.py" />
+    <Compile Include="44.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="45.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="46.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="47.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="48.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="49.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="5.py" />
+    <Compile Include="50.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="51.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="52.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="53.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="6.py" />
     <Compile Include="7.py" />
     <Compile Include="8.py" />
