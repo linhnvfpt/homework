@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{cd476673-831c-4bd6-9d20-6e1c01669630}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>39.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="1.py" />
+    <Compile Include="10.py" />
+    <Compile Include="11.py" />
+    <Compile Include="17.py" />
+    <Compile Include="18.py" />
+    <Compile Include="19.py" />
+    <Compile Include="2.py" />
+    <Compile Include="20.py" />
+    <Compile Include="21.py" />
+    <Compile Include="22.py" />
+    <Compile Include="23.py" />
+    <Compile Include="24.py" />
+    <Compile Include="25.py" />
+    <Compile Include="26.py" />
+    <Compile Include="27.py" />
+    <Compile Include="28.py" />
+    <Compile Include="29.py" />
+    <Compile Include="3.py" />
+    <Compile Include="30.py" />
+    <Compile Include="31.py" />
+    <Compile Include="32.py" />
+    <Compile Include="33.py" />
+    <Compile Include="34.py" />
+    <Compile Include="35.py" />
+    <Compile Include="36.py" />
+    <Compile Include="37.py" />
+    <Compile Include="38.py" />
+    <Compile Include="39.py" />
+    <Compile Include="4.py" />
+    <Compile Include="40.py" />
+    <Compile Include="41.py" />
+    <Compile Include="42.py" />
+    <Compile Include="43.py" />
+    <Compile Include="5.py" />
+    <Compile Include="6.py" />
+    <Compile Include="7.py" />
+    <Compile Include="8.py" />
+    <Compile Include="9.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
