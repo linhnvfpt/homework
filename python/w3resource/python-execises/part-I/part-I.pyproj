@@ -83,7 +83,31 @@
     <Compile Include="53.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="54.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="55.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="56.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="57.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="58.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="59.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="6.py" />
+    <Compile Include="60.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="61.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="7.py" />
     <Compile Include="8.py" />
     <Compile Include="9.py" />
