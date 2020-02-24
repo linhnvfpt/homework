@@ -5,13 +5,16 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{cd476673-831c-4bd6-9d20-6e1c01669630}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>1.py</StartupFile>
+    <StartupFile>76.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+    <CommandLineArguments>arg1 arg2 arg3</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
@@ -142,7 +145,34 @@
     <Compile Include="72.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="73.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="74.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="75.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="76.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="77.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="78.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="79.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="8.py" />
+    <Compile Include="80.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="81.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="9.py" />
   </ItemGroup>
   <ItemGroup>
