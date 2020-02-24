@@ -108,7 +108,40 @@
     <Compile Include="61.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="62.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="63.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="64.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="65.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="66.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="67.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="68.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="69.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="7.py" />
+    <Compile Include="70.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="71.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="72.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="8.py" />
     <Compile Include="9.py" />
   </ItemGroup>
