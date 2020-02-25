@@ -173,6 +173,24 @@
     <Compile Include="81.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="82.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="83.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="84.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="85.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="86.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="87.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="9.py" />
   </ItemGroup>
   <ItemGroup>
