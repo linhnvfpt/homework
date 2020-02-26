@@ -191,7 +191,28 @@
     <Compile Include="87.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="88.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="89.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="9.py" />
+    <Compile Include="90.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="91.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="92.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="93.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="94.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.6" />
