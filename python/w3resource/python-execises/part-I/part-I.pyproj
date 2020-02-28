@@ -24,6 +24,9 @@
   <ItemGroup>
     <Compile Include="1.py" />
     <Compile Include="10.py" />
+    <Compile Include="100.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="11.py" />
     <Compile Include="17.py" />
     <Compile Include="18.py" />
@@ -211,6 +214,21 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="94.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="95.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="96.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="97.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="98.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="99.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
