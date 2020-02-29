@@ -27,6 +27,27 @@
     <Compile Include="100.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="101.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="102.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="103.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="104.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="105.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="106.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="107.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="11.py" />
     <Compile Include="17.py" />
     <Compile Include="18.py" />
