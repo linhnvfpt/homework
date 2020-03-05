@@ -94,6 +94,21 @@
     <Compile Include="129.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="130.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="131.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="132.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="133.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="134.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="17.py" />
     <Compile Include="18.py" />
     <Compile Include="19.py" />
