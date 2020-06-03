@@ -1,0 +1,26 @@
+<div style="overflow-x: auto;">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container
+      *ngFor="let col of displayedColumns; let i = index"
+      [matColumnDef]="col"
+    >
+      <th style="width:1%;" mat-header-cell *matHeaderCellDef>{{ col }}</th>
+      <td style="width:1%;" mat-cell *matCellDef="let element" (click)="onClickCell($event)">
+        <ng-container *ngIf="i == 0">
+          {{ element.mainsize }}
+        </ng-container>
+        <ng-container *ngIf="i > 0">
+          <!-- <mat-select value="1" selected>
+          <mat-option *ngFor="let comp of comps" [value]="comp.value">
+            {{ comp.viewValue }}
+          </mat-option>
+        </mat-select> -->
+          R,O,C,S
+        </ng-container>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
