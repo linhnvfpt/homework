@@ -1,0 +1,11 @@
+<main>
+  <app-cart-header [numberItems]="numberItems"></app-cart-header>
+  <app-product-list
+    [products]="products"
+    (onRemoveProduct)="removeProduct($event)"
+  ></app-product-list>
+  <section class="container">
+    <app-promo-code></app-promo-code>
+    <app-cart-summary [cart_summary]="cartSummary"></app-cart-summary>
+  </section>
+</main>

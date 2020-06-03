@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{cd476673-831c-4bd6-9d20-6e1c01669630}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>76.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+    <CommandLineArguments>arg1 arg2 arg3</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="1.py" />
+    <Compile Include="10.py" />
+    <Compile Include="100.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="101.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="102.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="103.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="104.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="105.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="106.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="107.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11.py" />
+    <Compile Include="115.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="116.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="117.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="118.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="119.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="120.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="121.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="122.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="123.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="124.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="125.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="126.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="127.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="128.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="129.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="130.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="131.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="132.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="133.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="134.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="17.py" />
+    <Compile Include="18.py" />
+    <Compile Include="19.py" />
+    <Compile Include="2.py" />
+    <Compile Include="20.py" />
+    <Compile Include="21.py" />
+    <Compile Include="22.py" />
+    <Compile Include="23.py" />
+    <Compile Include="24.py" />
+    <Compile Include="25.py" />
+    <Compile Include="26.py" />
+    <Compile Include="27.py" />
+    <Compile Include="28.py" />
+    <Compile Include="29.py" />
+    <Compile Include="3.py" />
+    <Compile Include="30.py" />
+    <Compile Include="31.py" />
+    <Compile Include="32.py" />
+    <Compile Include="33.py" />
+    <Compile Include="34.py" />
+    <Compile Include="35.py" />
+    <Compile Include="36.py" />
+    <Compile Include="37.py" />
+    <Compile Include="38.py" />
+    <Compile Include="39.py" />
+    <Compile Include="4.py" />
+    <Compile Include="40.py" />
+    <Compile Include="41.py" />
+    <Compile Include="42.py" />
+    <Compile Include="43.py" />
+    <Compile Include="44.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="45.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="46.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="47.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="48.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="49.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="5.py" />
+    <Compile Include="50.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="51.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="52.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="53.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="54.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="55.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="56.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="57.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="58.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="59.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="6.py" />
+    <Compile Include="60.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="61.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="62.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="63.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="64.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="65.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="66.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="67.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="68.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="69.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="7.py" />
+    <Compile Include="70.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="71.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="72.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="73.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="74.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="75.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="76.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="77.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="78.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="79.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="8.py" />
+    <Compile Include="80.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="81.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="82.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="83.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="84.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="85.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="86.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="87.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="88.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="89.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="9.py" />
+    <Compile Include="90.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="91.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="92.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="93.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="94.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="95.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="96.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="97.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="98.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="99.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
