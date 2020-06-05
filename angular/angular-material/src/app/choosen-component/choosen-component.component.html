@@ -1,9 +1,9 @@
 <div mat-dialog-content>
-    <mat-checkbox [checked]="reduceSelected" (change)="switchStatus($event, 'R')" >[R] Reducing Tee / Cross</mat-checkbox>
-    <mat-checkbox [checked]="oletSelected" (change)="switchStatus($event, 'O')">[O] O-let</mat-checkbox>
-    <mat-checkbox [checked]="couplingSelected" (change)="switchStatus($event, 'C')">[C] Half Coupling</mat-checkbox>
-    <mat-checkbox [checked]="stubSelected" (change)="switchStatus($event, 'S')">[S] Stub in / OTAP</mat-checkbox>
+    <mat-checkbox  [checked]="true" (change)="switchStatus($event, 'R')" >[R] Reducing Tee / Cross</mat-checkbox>
+    <mat-checkbox  [checked]="data.full_O" (change)="switchStatus($event, 'O')">[O] O-let</mat-checkbox>
+    <mat-checkbox  [checked]="data.full_C" (change)="switchStatus($event, 'C')">[C] Half Coupling</mat-checkbox>
+    <mat-checkbox  [checked]="data.full_S" (change)="switchStatus($event, 'S')">[S] Stub in / OTAP</mat-checkbox>
 </div>
-<button style="float:right" [mat-dialog-close]="data.cell_content" cdkFocusInitial>Ok</button>
+<button style="float:right" [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
 
 

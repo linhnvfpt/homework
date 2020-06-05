@@ -5,6 +5,7 @@ import {
   MAT_DIALOG_DATA,
 } from '@angular/material/dialog';
 import { ChoosenComponentComponent } from './choosen-component/choosen-component.component';
+import { data } from './data_state_checkbox';
 
 export interface Element {
   mainsize: number;
@@ -49,22 +50,15 @@ const BRANCH_PIPE_DATA: Element[] = [
   { mainsize: 0.125 },
 ];
 
-interface Comp {
-  value: string;
-  viewValue: string;
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'angular material';
   cell_content: string = 'R,O,C,S';
   isMouseDown: boolean = false;
-  isHighlighted: boolean;
-  array_cell_content:string[];
+  data = data[0];
 
   displayedColumns: string[] = [
     'Inch',
@@ -112,11 +106,13 @@ export class AppComponent implements OnInit {
   ngOnInit() {}
 
   onClickCell(event: Event) {
+    // Remove id #cellSelected
     let foundEl = document.querySelector('#cellSelected');
     if (foundEl != null) {
       foundEl.removeAttribute('id');
     }
 
+    // Get item that click and add class highlighted for it
     let mouseEvent: MouseEvent = event as MouseEvent;
     let element: HTMLTableCellElement = mouseEvent.srcElement as HTMLTableCellElement;
     element.id = 'cellSelected';
@@ -124,69 +120,81 @@ export class AppComponent implements OnInit {
       element.classList.add('highlighted');
 
     // When user select multi cell, select cell
-    let isHasR = false;
-    let isHasO = false;
-    let isHasC = false;
-    let isHasS = false;
-    let isFull = false;
+    let count_R:number = 0;
+    let count_O:number = 0;
+    let count_C:number = 0;
+    let count_S:number = 0;
 
+    //
     let els_highlight = document.querySelectorAll('.highlighted');
     els_highlight.forEach.call(els_highlight, function (el) {
       let content:string = el.innerText;
-      if (content.indexOf('R') > -1) {
-        isHasR = true;
-      }
-      else isHasR = false;
-
-      if (content.indexOf('O') > -1) {
-        isHasO = true;
-      } 
-      else isHasO = false;
-
-      if (content.indexOf('C') > -1) {
-        isHasC = true;
-      }
-      else isHasC = false;
-
-      if (content.indexOf('S') > -1) {
-        isHasS = true;
-      }
-      else isHasS = false;
+      if (content.indexOf('R') > -1) count_R++;
+      if (content.indexOf('O') > -1) count_O++;
+      if (content.indexOf('C') > -1) count_C++;
+      if (content.indexOf('S') > -1) count_S++;
     });
 
-    if (isHasR && isHasO && isHasC && isHasS) isFull = true;
+    if (count_R == 0) this.data.full_R = false;
+    else if (count_R == els_highlight.length) this.data.full_R = true;
+    else if (count_R < els_highlight.length)  this.data.undefine_R = true;
 
-    // // Miss 1 component
-    // if (isHasR && isHasO && isHasC && !isHasS) isMissS = true;
-    // if (isHasR && isHasO && !isHasC && isHasS) isMissC = true;
-    // if (isHasR && !isHasO && isHasC && isHasS) isMissO = true;
-    // if (!isHasR && isHasO && isHasC && isHasS) isMissR = true;
+    if (count_O == 0) this.data.full_O = false;
+    else if (count_O == els_highlight.length) this.data.full_O = true;
+    else if (count_O < els_highlight.length)  this.data.undefine_O = true;
 
-    // // Miss 2 component
-    // if (isHasR && isHasO && !isHasC && !isHasS) isMissCS = true;
-    // if (isHasR && !isHasO && !isHasC && isHasS) isMissOC = true;
-    // if (!isHasR && !isHasO && isHasC && isHasS) isMissRO = true;
-    // if (!isHasR && isHasO && isHasC && isHasS) isMissR = true;
+    if (count_C == 0) this.data.full_C = false;
+    else if (count_C == els_highlight.length) this.data.full_C = true;
+    else if (count_C < els_highlight.length)  this.data.undefine_C = true;
 
-    // // Miss 3 component
-    // if (isHasR && isHasO && isHasC && !isHasS) isMissS = true;
-    // if (isHasR && isHasO && !isHasC && isHasS) isMissC = true;
-    // if (isHasR && !isHasO && isHasC && isHasS) isMissO = true;
-    // if (!isHasR && isHasO && isHasC && isHasS) isMissR = true;
-
-
+    if (count_S == 0) this.data.full_S = false;
+    else if (count_S == els_highlight.length) this.data.full_S = true;
+    else if (count_S < els_highlight.length)  this.data.undefine_S = true;
+    console.log(this.data);
+    // Open dialog with parameters
     const dialogRef = this.dialog.open(ChoosenComponentComponent, {
       width: '250px',
       height: '170px',
-      data: { cell_content: element.innerText },
+      data: { data: this.data },
     });
 
+    // Process data after dialog closed
     dialogRef.afterClosed().subscribe((result) => {
       // Set text for cell with class "highlighted"
       // Remove class "highlighted" out of cell
       let els = document.querySelectorAll('.highlighted');
       els.forEach.call(els, function (el) {
-        el.innerHTML = result;
+        this.data = result;
+        let content:string = el.innerHTML;
+        if (this.data.full_R) {
+          if (content.indexOf('R') == -1) content = 'R,' + content;
+        }
+        else {
+          if (content.indexOf('R') > -1) content = content.replace('R','');
+        }
+
+        if (this.data.full_O) {
+          if (content.indexOf('O') == -1) content = 'O,' + content;
+        }
+        else {
+          if (content.indexOf('O') > -1) content = content.replace('O','');
+        }
+
+        if (this.data.full_C) {
+          if (content.indexOf('C') == -1) content = 'C,' + content;
+        }
+        else {
+          if (content.indexOf('C') > -1) content = content.replace('C','');
+        }
+
+        if (this.data.full_S) {
+          if (content.indexOf('S') == -1) content = 'S,' + content;
+        }
+        else {
+          if (content.indexOf('S') > -1) content = content.replace('S','');
+        }
+
+        el.innerHTML = content;
         el.classList.remove('highlighted');
       });
     });
