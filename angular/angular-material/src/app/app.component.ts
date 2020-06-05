@@ -1,7 +1,4 @@
-import {
-  Component,
-  OnInit,
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   MatDialog,
   MatDialogRef,
@@ -64,7 +61,10 @@ interface Comp {
 })
 export class AppComponent implements OnInit {
   title = 'angular material';
-  cell_content:string = "R,O,C,S";
+  cell_content: string = 'R,O,C,S';
+  isMouseDown: boolean = false;
+  isHighlighted: boolean;
+  array_cell_content:string[];
 
   displayedColumns: string[] = [
     'Inch',
@@ -109,33 +109,116 @@ export class AppComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {}
 
-  ngOnInit() {
-   
-  }
+  ngOnInit() {}
 
-  onClickCell(event: Event): void {
-    let foundEl = document.querySelector("#cellSelected");
-    if (foundEl != null && foundEl.hasAttribute('id')) {
-      this.cell_content = foundEl.innerHTML;
+  onClickCell(event: Event) {
+    let foundEl = document.querySelector('#cellSelected');
+    if (foundEl != null) {
       foundEl.removeAttribute('id');
     }
-    
+
     let mouseEvent: MouseEvent = event as MouseEvent;
-    let element:HTMLTableCellElement = mouseEvent.srcElement as HTMLTableCellElement;
-    element.id = "cellSelected";
+    let element: HTMLTableCellElement = mouseEvent.srcElement as HTMLTableCellElement;
+    element.id = 'cellSelected';
+    if (element.classList.contains('highlighted') == false)
+      element.classList.add('highlighted');
+
+    // When user select multi cell, select cell
+    let isHasR = false;
+    let isHasO = false;
+    let isHasC = false;
+    let isHasS = false;
+    let isFull = false;
+
+    let els_highlight = document.querySelectorAll('.highlighted');
+    els_highlight.forEach.call(els_highlight, function (el) {
+      let content:string = el.innerText;
+      if (content.indexOf('R') > -1) {
+        isHasR = true;
+      }
+      else isHasR = false;
+
+      if (content.indexOf('O') > -1) {
+        isHasO = true;
+      } 
+      else isHasO = false;
+
+      if (content.indexOf('C') > -1) {
+        isHasC = true;
+      }
+      else isHasC = false;
+
+      if (content.indexOf('S') > -1) {
+        isHasS = true;
+      }
+      else isHasS = false;
+    });
+
+    if (isHasR && isHasO && isHasC && isHasS) isFull = true;
+
+    // // Miss 1 component
+    // if (isHasR && isHasO && isHasC && !isHasS) isMissS = true;
+    // if (isHasR && isHasO && !isHasC && isHasS) isMissC = true;
+    // if (isHasR && !isHasO && isHasC && isHasS) isMissO = true;
+    // if (!isHasR && isHasO && isHasC && isHasS) isMissR = true;
+
+    // // Miss 2 component
+    // if (isHasR && isHasO && !isHasC && !isHasS) isMissCS = true;
+    // if (isHasR && !isHasO && !isHasC && isHasS) isMissOC = true;
+    // if (!isHasR && !isHasO && isHasC && isHasS) isMissRO = true;
+    // if (!isHasR && isHasO && isHasC && isHasS) isMissR = true;
+
+    // // Miss 3 component
+    // if (isHasR && isHasO && isHasC && !isHasS) isMissS = true;
+    // if (isHasR && isHasO && !isHasC && isHasS) isMissC = true;
+    // if (isHasR && !isHasO && isHasC && isHasS) isMissO = true;
+    // if (!isHasR && isHasO && isHasC && isHasS) isMissR = true;
+
 
     const dialogRef = this.dialog.open(ChoosenComponentComponent, {
       width: '250px',
       height: '170px',
-      data: { cell_content: this.cell_content}
+      data: { cell_content: element.innerText },
     });
-    
+
     dialogRef.afterClosed().subscribe((result) => {
-      let foundEl = document.querySelector("#cellSelected");
-      if (foundEl != null) {
-        foundEl.setAttribute("style","background-color:white");
-        foundEl.innerHTML = result;
-      }
+      // Set text for cell with class "highlighted"
+      // Remove class "highlighted" out of cell
+      let els = document.querySelectorAll('.highlighted');
+      els.forEach.call(els, function (el) {
+        el.innerHTML = result;
+        el.classList.remove('highlighted');
+      });
     });
+    return false;
+  }
+
+  onMouseDown(event: MouseEvent) {
+    if (event.button == 0) {
+      // Click mouse left
+      this.isMouseDown = !this.isMouseDown;
+      let element: HTMLTableCellElement = event.srcElement as HTMLTableCellElement;
+      if (element.tagName.toLowerCase() === 'td') {
+        if (this.isMouseDown) element.classList.add('highlighted');
+      }
+    }
+    return false;
+  }
+
+  onMouseOver(event: MouseEvent) {
+    // if (event.button == 0) {
+    //   let element: HTMLTableCellElement = event.srcElement as HTMLTableCellElement;
+    //   if (element.tagName.toLowerCase() === 'td') {
+    //     if (this.isMouseDown)
+    //       element.setAttribute('style', 'background-color:#999');
+    //     else element.setAttribute('style', 'background-color:white');
+    //   }
+    // }
+    // return false;
+  }
+
+  onMouseUp(event: MouseEvent) {
+    this.isMouseDown = false;
+    return false;
   }
 }

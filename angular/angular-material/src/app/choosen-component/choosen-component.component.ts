@@ -28,7 +28,6 @@ export class ChoosenComponentComponent implements OnInit {
 
   ngOnInit(): void {
     let element = document.querySelector('#cellSelected');
-    element.setAttribute('style', 'background-color:#DEB887');
     const rect: DOMRect = element.getBoundingClientRect();
 
     const matDialogConfig = new MatDialogConfig();
@@ -42,15 +41,22 @@ export class ChoosenComponentComponent implements OnInit {
     if (arrayCompSelected.indexOf('R') > -1) {
       this.reduceSelected = true;
     }
+    else this.reduceSelected = false;
+
     if (arrayCompSelected.indexOf('O') > -1) {
       this.oletSelected = true;
     }
+    else this.oletSelected = false;
+
     if (arrayCompSelected.indexOf('C') > -1) {
       this.couplingSelected = true;
     }
+    else this.couplingSelected = false;
+
     if (arrayCompSelected.indexOf('S') > -1) {
       this.stubSelected = true;
     }
+    else this.stubSelected = false;
   }
 
   public switchStatus(event: MatCheckboxChange, comp: string) {

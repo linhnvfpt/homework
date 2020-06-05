@@ -1,11 +1,12 @@
 <div style="overflow-x: auto;">
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" id="branch_table" 
+         (mousedown)="onMouseDown($event)" (mouseover)="onMouseOver($event)" (mouseup)="onMouseUp($event)">
     <ng-container
       *ngFor="let col of displayedColumns; let i = index"
       [matColumnDef]="col"
     >
       <th style="width:1%;" mat-header-cell *matHeaderCellDef>{{ col }}</th>
-      <td style="width:1%;" mat-cell *matCellDef="let element" (click)="onClickCell($event)" ([ngModel])="cell_content">
+      <td style="width:1%;" mat-cell *matCellDef="let element" (contextmenu)="onClickCell($event)">
         <ng-container *ngIf="i == 0">
           {{ element.mainsize }}
         </ng-container>

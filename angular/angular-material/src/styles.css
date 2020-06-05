@@ -2,3 +2,25 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+table {
+    table-layout:fixed;
+  }
+  
+  table, th, td {
+      width: 100%;
+      border: 1px solid #c8d5e3;
+      border-collapse: collapse;
+    }
+  
+  th {
+      background-color:#cacacb;
+  }
+  
+  .highlighted {
+    background-color:#999;
+  }
+  
+  .un_highlighted {
+    background-color: white;
+  }
