@@ -1,9 +1,0 @@
-table, th, td {
-    width: 100%;
-    border: 1px solid #c8d5e3;
-    border-collapse: collapse;
-  }
-
-th {
-    background-color:#cacacb;
-}
