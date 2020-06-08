@@ -1,29 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 table {
-    table-layout:fixed;
-  }
-  
-  table, th, td {
-      width: 100%;
-      border: 1px solid #c8d5e3;
-      border-collapse: collapse;
-    }
-  
-  th {
-      background-color:#cacacb;
-  }
-  
-  .highlighted {
-    background-color:#999;
-  }
-  
-  .un_highlighted {
-    background-color: white;
-  }
+  width: 100%;
+  border: 1px solid #c8d5e3;
+  border-spacing: 0;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+td {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #c8d5e3;
+}
+
+th.mat-header-cell {
+  text-align: center;
+  padding: 5px;
+  background-color: #ADD8E6;
+  border: 1px solid #c8d5e3
+}
+
+.cell_index_0 {
+  background-color: #ADFF2F;
+}
+
+.highlighted {
+  background-color: #FFA07A;
+}

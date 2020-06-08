@@ -14,6 +14,10 @@ export class data_state_checkbox {
   // State of checkbox S
   full_S: boolean;
   undefine_S: boolean;
+
+  // State of checkbox T
+  full_T: boolean;
+  undefine_T: boolean;
 }
 
 export const data: data_state_checkbox[] = [
@@ -33,5 +37,9 @@ export const data: data_state_checkbox[] = [
     // State of checkbox S
     full_S : false,
     undefine_S : false,
+
+    // State of checkbox T
+    full_T : false,
+    undefine_T : false,
   }
 ];

@@ -12,9 +12,8 @@
       *ngFor="let col of displayedColumns; let i = index"
       [matColumnDef]="col"
     >
-      <th style="width: 1%;" mat-header-cell *matHeaderCellDef>{{ col }}</th>
+      <th mat-header-cell *matHeaderCellDef>{{ col }}</th>
       <td
-        style="width: 1%;"
         mat-cell
         *matCellDef="let element"
         (contextmenu)="onClickCell($event)"

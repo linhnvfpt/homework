@@ -1,9 +1,9 @@
-<div mat-dialog-content>
-    <mat-checkbox  [indeterminate]="dat.undefine_R" [checked]="dat.full_R" (change)="switchStatus($event, 'R')" >[R] Reducing Tee / Cross</mat-checkbox>
-    <mat-checkbox  [indeterminate]="dat.undefine_O" [checked]="dat.full_O" (change)="switchStatus($event, 'O')">[O] O-let</mat-checkbox>
-    <mat-checkbox  [indeterminate]="dat.undefine_C" [checked]="dat.full_C" (change)="switchStatus($event, 'C')">[C] Half Coupling</mat-checkbox>
-    <mat-checkbox  [indeterminate]="dat.undefine_S" [checked]="dat.full_S" (change)="switchStatus($event, 'S')">[S] Stub in / OTAP</mat-checkbox>
-</div>
+
+<mat-checkbox  [indeterminate]="dat.undefine_R" [checked]="dat.full_R" (change)="switchStatus($event, 'R')" >[R] Reducing Tee / Cross</mat-checkbox><br>
+<mat-checkbox  [indeterminate]="dat.undefine_O" [checked]="dat.full_O" (change)="switchStatus($event, 'O')">[O] O-let</mat-checkbox><br>
+<mat-checkbox  [indeterminate]="dat.undefine_C" [checked]="dat.full_C" (change)="switchStatus($event, 'C')">[C] Half Coupling</mat-checkbox><br>
+<mat-checkbox  [indeterminate]="dat.undefine_S" [checked]="dat.full_S" (change)="switchStatus($event, 'S')">[S] Stub in / OTAP</mat-checkbox><br>
+<mat-checkbox  [indeterminate]="dat.undefine_T" [checked]="dat.full_T" (change)="switchStatus($event, 'T')">[TR] Strainght Tee/Cross + Reducer</mat-checkbox><br>
 <button style="float:right" [mat-dialog-close]="dat" cdkFocusInitial>Ok</button>
 
 
